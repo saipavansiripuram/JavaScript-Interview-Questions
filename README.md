@@ -1,6 +1,6 @@
 # JavaScript-Interview-Questions
 
-## Q: What is Hositing in JavaScript ?
+## Q: What is Hoisting in JavaScript ?
 
 A: In JavaScript, hoisting is a behavior where variable and function declarations are moved to the top of their containing scope during the compilation phase, before the code is actually executed.
 
