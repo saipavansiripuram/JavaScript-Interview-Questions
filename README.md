@@ -1,6 +1,26 @@
 # JavaScript-Interview-Questions
 
-## Q: What is Hoisting in JavaScript ?
+### Table of Contents
+
+| No. | Questions |
+|---- | --------- |
+|1 | [What is Hoisting in JavaScript ?](#what-is-hoisting-in-javascript-)|
+|2 | [What is difference between let and var ?](#what-is-difference-between-let-and-var-)|
+|3 | [What is Event Loop ?](#what-is-event-loop-)|
+|4 | [What is difference between setTimeout and setInterval?](#what-is-difference-between-settimeout-and-setinterval-)|
+|5 | [What is features that are introduced or you used in ES6?](#what-is-features-that-are-introduced-or-you-used-in-es6-)|
+|6 | [Explain Rest and Spread with an Example ?](#explain-rest-and-spread-with-an-example-)|
+|7 | [What are promises , explain with example , how they are different from async and await ?](#what-are-promises--explain-with-example--how-they-are-different-from-async-and-await-)|
+|8 | [Are promises and async & await are same ?](#are-promises-and-async--await-are-same-)|
+|9 | [What is array.reverse and what is the purpose of it ?](#what-is-arrayreverse-and-what-is-the-purpose-of-it-)|
+|10 | [Deep copy and Shallow copy ?](#deep-copy-and-shallow-copy-)|
+|11 | [What are closures ?](#what-are-closures-)|
+|12 | [Suppose we have a function and there are no functions outside it but variable declared their , still the varible can be accessed inside function and Then is it also called Closure ?](#suppose-we-have-a-function-and-there-are-no-functions-outside-it-but-variable-declared-their--still-the-varible-can-be-accessed-inside-function-and-then-is-it-also-called-closure-)|
+|13 | [MAP , REDUCE , FILTER](#map--reduce--filter)|
+
+You can use these links to quickly navigate to each question in the document.
+
+1. ### Q: What is Hoisting in JavaScript ?
 
 A: In JavaScript, hoisting is a behavior where variable and function declarations are moved to the top of their containing scope during the compilation phase, before the code is actually executed.
 
@@ -30,8 +50,9 @@ function sayHello() {
 
 - To avoid confusion and write more readable code, it's generally recommended to declare variables at the top of their scope and define functions before calling them.
 
-
-## Q: What is difference between let and var ?
+  **[⬆ Back to Top](#table-of-contents)**
+  
+2. ### Q: What is difference between let and var ?
 
 The main differences between `let` and `var` in JavaScript are related to scoping and hoisting:
 
@@ -67,8 +88,10 @@ The main differences between `let` and `var` in JavaScript are related to scopin
 
 In general, it's often recommended to use `let` and `const` over `var` because they provide better scoping rules and help avoid common pitfalls associated with `var`. `let` is used when you need to reassign a variable, while `const` is used when the variable's value should remain constant (unchanged).
 
+  
+  **[⬆ Back to Top](#table-of-contents)**
 
-## Q: What is Event Loop ?
+3. ### Q: What is Event Loop ?
 
 
 The Event Loop is a core concept in JavaScript, managing the execution of code. It continually checks the Call Stack for tasks to execute and the Callback Queue for completed asynchronous tasks. When the Call Stack is empty, it takes tasks from the Callback Queue and adds them to the Call Stack. This mechanism allows JavaScript to handle asynchronous operations without blocking the main thread.
@@ -90,7 +113,9 @@ Here's a simplified explanation:
 Here's a simple analogy:
 Imagine you are at a restaurant waiting for your order. While waiting, you don't just stare at the waiter; you do other things (read a menu, talk to friends, etc.). When your order is ready, the waiter informs you, and you focus on eating. The Event Loop is like this constant checking and managing of tasks in JavaScript, ensuring that your program remains responsive and efficient.
 
-## Q: What is difference between `setTimeout` and `setInterval`?
+  **[⬆ Back to Top](#table-of-contents)**
+  
+4. ### Q: What is difference between `setTimeout` and `setInterval`?
 
 `setTimeout` and `setInterval` are both functions in JavaScript used for executing code after a specified amount of time, but they differ in how they handle repeated execution:
 
@@ -116,7 +141,9 @@ Imagine you are at a restaurant waiting for your order. While waiting, you don't
 
 In summary, `setTimeout` is used for executing code once after a specified delay, while `setInterval` is used for repeatedly executing code at regular intervals. When working with `setInterval`, be cautious about potential performance issues or conflicts, and consider using `clearInterval` to stop the repeating execution when necessary.
 
-## Q: What is features that are introduced or you used in ES6?
+  **[⬆ Back to Top](#table-of-contents)**
+  
+5. ### Q: What is features that are introduced or you used in ES6?
 
 ECMAScript 6 (ES6), also known as ECMAScript 2015, introduced several new features and enhancements to the JavaScript language. Here are some of the key features introduced in ES6:
 
@@ -206,9 +233,9 @@ ECMAScript 6 (ES6), also known as ECMAScript 2015, introduced several new featur
 
 These are just a few highlights of the features introduced in ES6. The update aimed to enhance the readability, flexibility, and overall expressiveness of JavaScript code.
 
+  **[⬆ Back to Top](#table-of-contents)**
 
-
-## Q: Explain Rest and Spread with an Example ?
+6. ### Q: Explain Rest and Spread with an Example ?
 
 The spread (`...`) and rest (`...`) operators in JavaScript provide convenient ways to work with arrays and function parameters.
 
@@ -260,8 +287,9 @@ console.log(rest); // [3, 4, 5]
 
 Here, the rest operator is employed in array destructuring to gather the remaining elements into the `rest` array. `first` and `second` capture the first two elements of the original array.
 
+  **[⬆ Back to Top](#table-of-contents)**
 
-## Q: What are promises , explain with example , how they are different from async and await ?
+7. ### Q: What are promises , explain with example , how they are different from async and await ?
 
 Promises are a mechanism in JavaScript for handling asynchronous operations. They represent a value that may be available now, or in the future, or never. Promises have three states: pending (initial state), fulfilled (operation completed successfully), and rejected (operation failed).
 
@@ -327,8 +355,9 @@ In this example, `fetchDataAsync` is an asynchronous function that uses `await` 
 
 In summary, Promises provide a way to work with asynchronous code, while `async` and `await` simplify the syntax for working with Promises, making asynchronous code look more like synchronous code.
 
+  **[⬆ Back to Top](#table-of-contents)**
 
-## Q: Are promises and async & await are same ?
+8. ### Q: Are promises and async & await are same ?
 
 Promises and `async`/`await` are related concepts in JavaScript, but they are not exactly the same.
 
@@ -368,7 +397,7 @@ While `async`/`await` is built on top of Promises, they serve different purposes
 
 In summary, `async`/`await` is a syntax feature that simplifies the usage of Promises, making asynchronous code more readable and maintainable. They work hand in hand to improve the overall experience of dealing with asynchronous operations in JavaScript.
 
-## Q: What is array.reverse and what is the purpose of it ?
+9. ### Q: What is array.reverse and what is the purpose of it ?
 
 The `Array.reverse()` method in JavaScript is used to reverse the elements of an array. It modifies the array in place, meaning it changes the original array, and it returns the reversed array.
 
@@ -404,7 +433,9 @@ console.log(originalArray); // [1, 2, 3, 4, 5] (original array remains unchanged
 
 In this example, the spread operator `...` is used to create a shallow copy of `originalArray`, and then `reverse()` is applied to the copy.
 
-## Q: Deep copy and Shallow copy ?
+  **[⬆ Back to Top](#table-of-contents)**
+
+10. ### Q: Deep copy and Shallow copy ?
 
 Deep copy and shallow copy refer to different ways of copying objects and arrays in programming. These terms are commonly used in the context of data structures, and understanding the distinction is crucial when working with complex data.
 
@@ -447,8 +478,10 @@ Deep copy and shallow copy refer to different ways of copying objects and arrays
 Choosing between a shallow copy and a deep copy depends on the specific use case and the desired behavior when dealing with nested structures and shared references. Keep in mind that deep copying can be less performant and may not handle certain types of objects (like functions or circular references) properly.
 
 - Deep copy will not impact and shallow copy will impact 
+
+  **[⬆ Back to Top](#table-of-contents)**
   
-## Q: What are closures ?
+11. ### Q: What are closures ?
   
   - Suppose If we have a function and have another function inside it , when we declare variable in parent function it can be accessible in child function too .
 
@@ -516,8 +549,9 @@ doSomethingAsync(function() {
 
 In this case, the anonymous function passed to `setTimeout` forms a closure, preserving the context in which it was created, even after the outer function (`doSomethingAsync`) has completed execution.
 
+  **[⬆ Back to Top](#table-of-contents)**
 
-## Q: Suppose we have a function and there are no functions outside it but variable declared their , still the varible can be accessed inside function and Then is it also called Closure ?
+12. ### Q: Suppose we have a function and there are no functions outside it but variable declared their , still the varible can be accessed inside function and Then is it also called Closure ?
 
 Yesd, it is still considered a closure. In JavaScript, a closure is formed whenever a function accesses variables from its outer (enclosing) scope, and in your case, the `innerFunction` is accessing `outerVariable` from its outer scope (`outerFunction`).
 
@@ -539,7 +573,9 @@ outerFunction(); // Outputs: "I am from the outer function"
 
 The `innerFunction` retains access to `outerVariable`, even though it's called after `outerFunction` has completed execution. This demonstrates the fundamental concept of closures in JavaScript.
 
-## Q : MAP , REDUCE , FILTER 
+  **[⬆ Back to Top](#table-of-contents)**
+
+13. ### Q : MAP , REDUCE , FILTER 
 
 Certainly! `map`, `reduce`, and `filter` are higher-order functions in JavaScript that operate on arrays. They provide a concise and expressive way to perform operations on each element of an array (`map` and `filter`) or to aggregate and transform array elements (`reduce`).
 
@@ -685,7 +721,9 @@ const sum = numbers.reduce((accumulator, currentValue, index, array) => {
 console.log(sum); // 15
 ```
 
-## Q: Both promises and callbacks are mechanisms in JavaScript used for handling asynchronous operations, but they have some key differences in terms of syntax, readability, and ease of use.
+  **[⬆ Back to Top](#table-of-contents)**
+
+14. ### Q: Both promises and callbacks are mechanisms in JavaScript used for handling asynchronous operations, but they have some key differences in terms of syntax, readability, and ease of use.
 
 ### Callbacks:
 
@@ -795,3 +833,5 @@ Both promises and callbacks are mechanisms in JavaScript used for handling async
    ```
 
 In summary, while both callbacks and promises can be used for handling asynchronous code, promises offer a more structured and readable approach, especially in scenarios involving multiple asynchronous operations. Promises help avoid callback hell, provide better error handling, and offer a more intuitive way to work with asynchronous code. The introduction of async/await, built on top of promises, further improves the readability of asynchronous JavaScript.
+
+  **[⬆ Back to Top](#table-of-contents)**
