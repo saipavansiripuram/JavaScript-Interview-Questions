@@ -725,6 +725,7 @@ console.log(sum); // 15
 
 14. ### Both promises and callbacks are mechanisms in JavaScript used for handling asynchronous operations, but they have some key differences in terms of syntax, readability, and ease of use.
 
+
 ### Callbacks:
 
 1. **Callback Hell (Callback Pyramid):**
@@ -835,3 +836,43 @@ Both promises and callbacks are mechanisms in JavaScript used for handling async
 In summary, while both callbacks and promises can be used for handling asynchronous code, promises offer a more structured and readable approach, especially in scenarios involving multiple asynchronous operations. Promises help avoid callback hell, provide better error handling, and offer a more intuitive way to work with asynchronous code. The introduction of async/await, built on top of promises, further improves the readability of asynchronous JavaScript.
 
   **[⬆ Back to Top](#table-of-contents)**
+
+
+15. ### What is Currying in JavaScript ?
+
+Currying is a technique used in functional programming where function with multiple arguments are transformed into a sequence of nested functions,each taking a single argument. This allows us to partially apply function to its arguments.
+
+```javascript
+function mul(a) {
+  return function(b) {
+    return a * b;
+  };
+}
+
+const multiply= mul(2);
+console.log(multiply(4)); // Output: 8
+```
+
+Here's a step-by-step breakdown:
+
+1. **Defining the `multiply` function**: The `multiply` function takes a single argument `a` and returns another function.
+
+2. **Returning a function**: Inside `multiply`, it returns an anonymous function that takes a single argument `b`. This inner function has access to the `a` variable because of closure - even after `multiply` has finished executing.
+
+3. **Partial application**: When you call `multiply(2)`, you're essentially providing the first argument `a` to the `multiply` function. This returns a new function that expects the second argument `b`.
+
+4. **Using the partially applied function**: The returned function (`multiplyByTwo`) now effectively multiplies any argument passed to it by 2, as it has already been partially applied with `a = 2`.
+
+5. **Final usage**: When you call `multiplyByTwo(4)`, you're passing `4` as the argument `b` to the inner function. This results in `2 * 4`, which equals `8`.
+
+Currying has several benefits, including:
+
+- **Code Reusability**: You can reuse the partially applied functions with different arguments.
+- **Readability**: Curried functions can often be more readable, as they allow for better modularization of code.
+- **Flexibility**: It enables more flexible function composition and chaining.
+
+This technique is powerful and widely used in functional programming paradigms, allowing for cleaner and more expressive code.
+
+16. 
+
+  
